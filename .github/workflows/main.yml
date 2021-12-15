@@ -1,0 +1,20 @@
+      
+  - name: Jenkins Job Trigger
+  # You may pin to the exact commit or the version.
+  # uses: estherk0/jenkins-trigger@70ee28b6020e5894782308052ae4bba253256823
+  uses: estherk0/jenkins-trigger@1.0
+  with:
+    # Jenkins full URL including http/https protocol
+    url: http://jenkins-demo.qtestdev.com:8080
+    # User name of Jenkins
+    user_name: Jam
+    # Jenkins API token
+    api_token: 1189c151d65bf7b9eb305e882ed0c9576a
+    # Job name
+    job_name: Jamz_New_Test
+    # Job parameter in JSON format. ex) {"param1":"value1"} 
+    parameter: # optional
+    # Waiting for job completion or not
+    wait: # optional, default is true
+    # Timeout (seconds) for github action. Set 600s as default
+    timeout: # optional, default is 600
