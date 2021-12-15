@@ -1,0 +1,20 @@
+# This is a basic workflow that is manually triggered
+
+name: Auto workflow
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-pages:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Trigger GitHub pages rebuild
+        run: |
+          curl I -u Jlutz:1189c151d65bf7b9eb305e882ed0c9576a http://jenkins-demo.qtestdev.com:8080/user/jlutz/my-views/view/all/job/Jamz_New_Test/build?token=1189c151d65bf7b9eb305e882ed0c9576aJamz
+          
